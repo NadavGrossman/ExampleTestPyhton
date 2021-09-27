@@ -1,14 +1,9 @@
 import pytest
-
-
-@pytest.fixture
-def some_array():
-    return [1]
-
+from fixtures.fixture_1 import some_array
 
 @pytest.mark.asyncio
 async def test_example(some_array):
-    assert [2] == some_array
+    assert [1] == some_array
 
 
 if __name__ == "__main__":
